@@ -9,6 +9,8 @@ import { app, Menu } from "electron";
 import { devMenuTemplate } from "./menu/dev_menu_template";
 import { editMenuTemplate } from "./menu/edit_menu_template";
 import createWindow from "./helpers/window";
+import Db from "./db/db";
+import { setup } from "./db/setup";
 
 // Special module holding environment variables which you declared
 // in config/env_xxx.json file.
@@ -30,26 +32,37 @@ if (env.name !== "production") {
   app.setPath("userData", `${userDataPath} (${env.name})`);
 }
 
-app.on("ready", () => {
+let mainWindow = null;
+
+const initalize = () => {
   setApplicationMenu();
 
-  const mainWindow = createWindow("main", {
+  mainWindow = createWindow("main", {
     width: 1000,
     height: 600
   });
 
   mainWindow.loadURL(
     url.format({
-      pathname: path.join(__dirname, "app.html"),
+      pathname: path.join(__dirname, "index.html"),
       protocol: "file:",
       slashes: true
     })
   );
 
+  mainWindow.maximize();
+
   if (env.name === "development") {
     mainWindow.openDevTools();
   }
-});
+
+  mainWindow.on("closed", () => {
+    mainWindow = null;
+  });
+  
+};
+
+app.on("ready", initalize);
 
 app.on("window-all-closed", () => {
   app.quit();

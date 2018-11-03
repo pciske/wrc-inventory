@@ -1,15 +1,14 @@
 {
-  "name": "electron-boilerplate",
-  "productName": "Electron Boilerplate",
-  "description": "Starter for your Electron application",
-  "version": "0.0.0",
+  "name": "whiterosecrafts-inventory",
+  "productName": "WhiteRoseCraftsInventory",
+  "description": "description",
+  "version": "0.0.1",
   "private": true,
-  "author": "Mr. Gumby <mr.gumby@example.com>",
-  "copyright": "© 2017, Gumby inc.",
-  "homepage": "http://example.com",
+  "author": "Geoffrey Bentz, Phillip Ciske",
+  "copyright": "© 2018, White Rose Crafts",
   "main": "app/background.js",
   "build": {
-    "appId": "com.example.electron-boilerplate",
+    "appId": "com.whiterosecrafts.inventory",
     "files": [
       "app/**/*",
       "node_modules/**/*",
@@ -31,7 +30,8 @@
     "release": "npm test && webpack --config=build/webpack.app.config.js --env=production && electron-builder"
   },
   "dependencies": {
-    "fs-jetpack": "^2.1.0"
+    "fs-jetpack": "^2.1.0",
+    "sqlite3": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.54",
@@ -41,8 +41,9 @@
     "chai": "^4.1.0",
     "css-loader": "^1.0.0",
     "electron": "2.0.2",
-    "electron-builder": "^20.15.1",
+    "electron-builder": "^20.28.4",
     "electron-mocha": "^6.0.4",
+    "electron-rebuild": "^1.8.2",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "mocha": "^5.2.0",
     "source-map-support": "^0.5.6",
