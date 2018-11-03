@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>White Rose Crafts - Inventory</title>
+
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/metisMenu/metisMenu.min.css" rel="stylesheet">
+  <link href="lib/sb-admin-2/css/sb-admin-2.css" rel="stylesheet">
+  <link href="lib/morrisjs/morris.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+
+  <link rel="import" href="pages/dashboard.html">
+  <link rel="import" href="pages/listing.html">
+  <link rel="import" href="pages/search.html">
+  <link rel="import" href="pages/settings.html">
+</head>
+<body id="app" style="display: none;">
+
+    <div id="wrapper">
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand">
+                  <img src="img/logo.png" height="30">
+                  White Rose Crafts Inventory</a>
+          </div>
+          <!-- /.navbar-header -->
+
+          <ul class="nav navbar-top-links navbar-right">
+              <!-- /.dropdown -->
+              <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-user">
+                      <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                      </li>
+                      <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                      </li>
+                  </ul>
+                  <!-- /.dropdown-user -->
+              </li>
+              <!-- /.dropdown -->
+          </ul>
+          <!-- /.navbar-top-links -->
+
+          <div class="navbar-default sidebar" role="navigation">
+              <div class="sidebar-nav navbar-collapse">
+                  <ul class="nav" id="side-menu">
+                      <!-- <li class="sidebar-search">
+                          <div class="input-group custom-search-form">
+                              <input type="text" class="form-control" placeholder="Search...">
+                              <span class="input-group-btn">
+                              <button class="btn btn-default" type="button">
+                                  <i class="fa fa-search"></i>
+                              </button>
+                          </span>
+                          </div>
+                      </li> -->
+                      <li>
+                          <a id="go-dashboard" data-section="dashboard" href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                      </li>
+                      <li>
+                          <a id="go-listing" data-section="listing" href="#"><i class="fa fa-wrench fa-fw"></i> Inventory Listing</a>
+                      </li>
+                      <li>
+                          <a id="go-search" data-section="search" href="#"><i class="fa fa-search fa-fw"></i> Search</a>
+                      </li>
+                      <li>
+                          <a id="go-settings" data-section="settings" href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- /.sidebar-collapse -->
+          </div>
+          <!-- /.navbar-static-side -->
+      </nav>
+
+      <div id="page-wrapper"></div>
+      <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+  
+  <script src="app.js"></script>
+
+  <script>
+    window.nodeRequire = require;
+    delete window.require;
+    delete window.exports;
+    delete window.module;
+  </script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <!-- Metis Menu Plugin JavaScript -->
+  <script src="lib/metisMenu/metisMenu.min.js"></script>
+  <!-- Morris Charts JavaScript -->
+  <!-- <script src="lib/raphael/raphael.min.js"></script>
+  <script src="lib/morrisjs/morris.min.js"></script>
+  <script src="data/morris-data.js"></script> -->
+  <!-- DataTables JavaScript -->
+  <script src="lib/datatables/js/jquery.dataTables.min.js"></script>
+  <script src="lib/datatables-plugins/dataTables.bootstrap.min.js"></script>
+  <script src="lib/datatables-responsive/dataTables.responsive.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script src="lib/sb-admin-2/js/sb-admin-2.js"></script>
+  <script src="inventoryJQuery.js"></script>
+</body>
+</html>
