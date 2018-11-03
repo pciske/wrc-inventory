@@ -5,4 +5,6 @@ import "./helpers/import.js";
 
 import "./nav.js";
 
+window.eval = global.eval = function() { throw new Error('eval is disabled') }
+
 document.querySelector("#app").style.display = "block";
